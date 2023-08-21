@@ -1,0 +1,108 @@
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
+.d-flex{
+  display: flex;
+  gap: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+  transition: 0.2s ease-in-out;
+}
+
+:hover::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: antiquewhite;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 100vh;
+  background: antiquewhite;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.box{
+  width: 320px;
+  aspect-ratio: 16/9;
+  background-color: #fff;
+  box-shadow: 0 0 27px 0 rgba(0,0,0,0.2);
+  background-image: url('image/spinner.gif');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  padding: 0;
+  margin: 0;
+}
+
+.box img{
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.image-block{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    height: 278px;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    padding: 0 10px 0 0;
+}
+
+.image{
+  line-height: 0;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  opacity: 0.5;
+  scroll-snap-align: center;
+}
+
+.image:hover{
+  opacity: 0.7;
+}
+
+.has-border{
+  border: 1px solid aqua;
+  transform: scale(0.9);
+  transition: 0.3s ease-in-out;
+}
+
+.small{
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 6px;
+}
+
+.fade-in{
+  opacity: 1;
+}
+

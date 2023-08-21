@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS image</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="d-flex">
+  <div class="box">
+    <img src="https://picsum.photos/id/266/1920/1080" alt="" id="box">
+  </div>
+  <div class="image-block">
+    <div class="image">
+      <img src="https://picsum.photos/id/220/1920/1080" alt="" class="small" loading="lazy">
+    </div><!-- first image -->
+    <div class="image">
+      <img src="https://picsum.photos/id/221/1920/1080" alt="" class="small" loading="lazy">
+    </div><!-- second image -->
+    <div class="image">
+      <img src="https://picsum.photos/id/222/1920/1080" alt="" class="small" loading="lazy">
+    </div><!-- third image -->
+    <div class="image">
+      <img src="https://picsum.photos/id/227/1920/1080" alt="" class="small" loading="lazy">
+    </div><!-- fourth image -->
+    <div class="image">
+      <img src="https://picsum.photos/id/228/1920/1080" alt="" class="small" loading="lazy">
+    </div><!-- fourth image -->
+    <div class="image">
+      <img src="https://picsum.photos/id/229/1920/1080" alt="" class="small" loading="lazy">
+    </div><!-- fourth image -->
+    <div class="image">
+      <img src="https://picsum.photos/id/230/1920/1080" alt="" class="small" loading="lazy">
+    </div><!-- fourth image -->
+  </div> <!-- image block -->
+</div><!-- d-flex -->
+  
+  
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  
+  <script>
+	(function($) {    
+	   // other code here    
+	  
+	  $(".image .small").click(function(){
+	    let url = $(this).attr("src");
+	    $("#box").attr("src", url);
+      
+	  });
+
+    $('.image').click(function(){
+
+      $(this).addClass("has-border fade-in").siblings().removeClass('has-border fade-in');
+
+    })
+
+	})(jQuery);
+  </script>
+
+</body>
+</html>
+
+
